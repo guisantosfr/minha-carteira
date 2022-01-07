@@ -1,1 +1,3 @@
-export default ['🤑', '🤩', '😍', '😎', '😃', '😄'];
+const emojisList = ['🤑', '🤩', '😍', '😎', '😃', '😄'];
+
+export default emojisList;
