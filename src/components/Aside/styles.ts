@@ -5,6 +5,26 @@ export const Container = styled.div`
   background-color: ${props => props.theme.color.secondary};
   padding-left: 1.25rem;
   border-right: 1px solid ${props => props.theme.color.gray};
+
+  a {
+    color: ${props => props.theme.color.info};
+  text-decoration: none;
+  margin: .5rem 0;
+
+  display: flex;
+  align-items: center;
+
+  transition: opacity .3s;
+
+  &:hover {
+    opacity: .7;
+  }
+
+  > svg{
+    font-size: 1.125rem;
+    margin-right: .375rem;
+  }
+  }
 `;
 
 export const Header = styled.header`
@@ -29,7 +49,7 @@ export const MenuContainer = styled.nav`
   flex-direction: column;
 `;
 
-export const MenuItemLink = styled.a`
+/* export const MenuItemLink = styled.a`
   color: ${props => props.theme.color.info};
   text-decoration: none;
   margin: .5rem 0;
@@ -47,4 +67,4 @@ export const MenuItemLink = styled.a`
     font-size: 1.125rem;
     margin-right: .375rem;
   }
-`;
+`; */
