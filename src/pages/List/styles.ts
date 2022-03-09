@@ -1,12 +1,8 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.div``;
 
-`;
-
-export const Content = styled.div`
-
-`;
+export const Content = styled.main``;
 
 export const Filters = styled.div`
   width: 100%;
@@ -19,11 +15,14 @@ export const Filters = styled.div`
   .tag-filter{
     font-size: 1.125rem;
     font-weight: 500;
+
     background: none;
     color: ${props => props.theme.color.white};
+
     margin: 0 1.25rem;
-    transition: opacity .3s;
+
     opacity: .4;
+    transition: opacity .3s;
 
     &:hover{
       opacity: .7;
