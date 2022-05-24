@@ -21,7 +21,7 @@ export const Container = styled.div`
 export const LeftSide = styled.aside`
   padding: 1.25rem;
 
-  >h2{
+  > h2{
     margin-bottom: 1.25rem;
   }
 
@@ -73,5 +73,7 @@ export const Legend = styled.li<ILegendProps>`
 `;
 
 export const RightSize = styled.main`
-
+  display: flex;
+  flex: 1;
+  justify-content: center;
 `;
