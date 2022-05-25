@@ -57,11 +57,11 @@ export const Legend = styled.li<ILegendProps>`
   > div{
     background-color : ${props => props.color};
 
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.75rem;
+    height: 2.75rem;
     border-radius: 5px;
 
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 2.5rem;
     text-align: center;
   }
