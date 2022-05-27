@@ -1,7 +1,7 @@
 import React from 'react';
-import { ResponsiveContainer, BarChart, Bar, Cell } from 'recharts';
+import { ResponsiveContainer, BarChart, Bar, Cell, Tooltip } from 'recharts';
 
-//import formatCurrency from '../../utils/formatCurrency';
+import formatCurrency from '../../utils/formatCurrency';
 import { Container, LeftSide, RightSide, LegendContainer, Legend } from './styles';
 
 interface IBarChartProps {
@@ -35,14 +35,14 @@ const BarChartBox: React.FC<IBarChartProps> = ({ title, data }) => {
       <RightSide>
         <ResponsiveContainer>
           <BarChart data={data}>
-            <Bar dataKey="amount">
+            <Bar dataKey="amount" name="Valor">
               {
                 data.map((indicator) => (
                   <Cell key={indicator.name} cursor="pointer" fill={indicator.color} />
                 ))
               }
             </Bar>
-
+            <Tooltip formatter={formatCurrency} cursor={{ fill: 'none' }} />
           </BarChart>
         </ResponsiveContainer>
       </RightSide>
