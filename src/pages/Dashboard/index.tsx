@@ -15,6 +15,7 @@ import monthsList from '../../utils/months';
 import happyImg from '../../assets/happy.svg';
 import sadImg from '../../assets/sad.svg';
 import grinningImg from '../../assets/grinning.svg';
+import opsImg from '../../assets/ops.svg';
 
 import { Container, Content } from './styles';
 
@@ -103,6 +104,13 @@ const Dashboard: React.FC = () => {
         footerText: 'Verifique seus gastos e tente cortar coisas desnecessárias',
         icon: sadImg
       }
+    } else if (totalGains === 0 && totalExpenses === 0) {
+      return {
+        title: 'Ops!',
+        description: 'Neste mês, não há registros de entradas ou saídas',
+        footerText: 'Parece que você não fez nenhum registro no mês',
+        icon: opsImg
+      }
     } else if (totalBalance === 0) {
       return {
         title: 'Ufa!',
@@ -118,24 +126,25 @@ const Dashboard: React.FC = () => {
         icon: happyImg
       }
     }
-  }, [totalBalance]);
+  }, [totalBalance, totalExpenses, totalGains]);
 
   const expensesVersusGains = useMemo(() => {
     const total = totalGains + totalExpenses;
-    const gainsPercent = (totalGains / total) * 100;
-    const expensesPercent = (totalExpenses / total) * 100;
+
+    const gainsPercent = Number(((totalGains / total) * 100).toFixed(1));
+    const expensesPercent = Number(((totalExpenses / total) * 100).toFixed(1));
 
     const data = [
       {
         name: 'Entradas',
-        percent: Number(gainsPercent.toFixed(1)),
         value: totalGains,
+        percent: gainsPercent ? gainsPercent : 0,
         color: '#F7931B'
       },
       {
         name: 'Saídas',
-        percent: Number(expensesPercent.toFixed(1)),
         value: totalExpenses,
+        percent: expensesPercent ? expensesPercent : 0,
         color: '#E44C4E'
       }
     ];
@@ -216,17 +225,19 @@ const Dashboard: React.FC = () => {
       });
 
     const total = recurrentAmount + eventualAmount;
+    const recurrentPercent = Number(((recurrentAmount / total) * 100).toFixed(1));
+    const eventualPercent = Number(((eventualAmount / total) * 100).toFixed(1));
 
     return [{
       name: 'Recorrentes',
       amount: recurrentAmount,
-      percent: Number(((recurrentAmount / total) * 100).toFixed(1)),
+      percent: recurrentPercent ? recurrentPercent : 0,
       color: '#F7931B'
     },
     {
       name: 'Eventuais',
       amount: eventualAmount,
-      percent: Number(((eventualAmount / total) * 100).toFixed(1)),
+      percent: eventualPercent ? eventualPercent : 0,
       color: '#E44C4E'
     }
     ];
@@ -254,17 +265,19 @@ const Dashboard: React.FC = () => {
       });
 
     const total = recurrentAmount + eventualAmount;
+    const recurrentPercent = Number(((recurrentAmount / total) * 100).toFixed(1));
+    const eventualPercent = Number(((eventualAmount / total) * 100).toFixed(1));
 
     return [{
       name: 'Recorrentes',
       amount: recurrentAmount,
-      percent: Number(((recurrentAmount / total) * 100).toFixed(1)),
+      percent: recurrentPercent ? recurrentPercent : 0,
       color: '#F7931B'
     },
     {
       name: 'Eventuais',
       amount: eventualAmount,
-      percent: Number(((eventualAmount / total) * 100).toFixed(1)),
+      percent: eventualPercent ? eventualPercent : 0,
       color: '#E44C4E'
     }
     ];
