@@ -19,7 +19,6 @@ export const Container = styled.div`
 
 export const ChartContainer = styled.div`
   height: 22.5rem;
-  flex: 1;
 `;
 
 export const Header = styled.header`
