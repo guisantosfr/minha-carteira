@@ -11,19 +11,17 @@ interface IHistoryFinanceCardProps {
 
 const HistoryFinanceCard: React.FC<IHistoryFinanceCardProps> = ({
   tagColor, title, subtitle, amount
-}) => {
-  return (
-    <Container>
-      <Tag color={tagColor} />
+}) => (
+  <Container>
+    <Tag color={tagColor} />
 
-      <div>
-        <span>{title}</span>
-        <small>{subtitle}</small>
-      </div>
+    <div>
+      <span>{title}</span>
+      <small>{subtitle}</small>
+    </div>
 
-      <h3>{amount}</h3>
-    </Container>
-  );
-}
+    <h3>{amount}</h3>
+  </Container>
+);
 
 export default HistoryFinanceCard;
