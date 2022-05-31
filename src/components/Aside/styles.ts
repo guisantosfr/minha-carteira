@@ -8,22 +8,22 @@ export const Container = styled.div`
 
   a {
     color: ${props => props.theme.color.info};
-  text-decoration: none;
-  margin: .5rem 0;
+    text-decoration: none;
+    margin: .5rem 0;
 
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 
-  transition: opacity .3s;
+    transition: opacity .3s;
 
-  &:hover {
-    opacity: .7;
-  }
+    &:hover {
+      opacity: .7;
+    }
 
-  > svg{
-    font-size: 1.125rem;
-    margin-right: .375rem;
-  }
+    > svg{
+      font-size: 1.125rem;
+      margin-right: .375rem;
+    }
   }
 `;
 
@@ -49,9 +49,12 @@ export const MenuContainer = styled.nav`
   flex-direction: column;
 `;
 
-/* export const MenuItemLink = styled.a`
+export const MenuItemButton = styled.button`
+  font-size: 1rem;
   color: ${props => props.theme.color.info};
-  text-decoration: none;
+
+  border: none;
+  background: none;
   margin: .5rem 0;
 
   display: flex;
@@ -67,4 +70,4 @@ export const MenuContainer = styled.nav`
     font-size: 1.125rem;
     margin-right: .375rem;
   }
-`; */
+`;
