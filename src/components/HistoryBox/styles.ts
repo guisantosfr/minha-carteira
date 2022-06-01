@@ -29,21 +29,24 @@ export const Header = styled.header`
   > h2 {
       margin-bottom: 1.5rem;
       padding-left: 1.25rem;
-    }
+  }
+
+  @media(max-width: 1200px){
+    flex-direction: column;
+  }
 `;
 
 export const LegendContainer = styled.ul`
   list-style: none;
   display: flex;
-  padding-right: 1.25rem;
 `;
 
 export const Legend = styled.li<ILegendProps>`
   display: flex;
   align-items: center;
 
-  margin-bottom: .5rem;
-  margin-left: .5rem;
+  margin-bottom: .75rem;
+  margin-left: 1rem;
 
   > div{
     background-color : ${props => props.color};
@@ -59,6 +62,13 @@ export const Legend = styled.li<ILegendProps>`
 
   > span{
     margin-left: .5rem;
+  }
+
+  @media(max-width: 1280px){
+    > div{
+      width: 2rem;
+      height: 2rem;
+    }
   }
 
 `;
