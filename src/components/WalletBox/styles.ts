@@ -41,11 +41,10 @@ export const Container = styled.div<IContainerProps>`
 
   @media(max-width: 770px){
     > span{
-      font-size: .75rem;
+      font-size: 1rem;
     }
 
     > h1{
-      word-wrap: break-word;
       font-size: 1.375rem;
 
       > strong{
@@ -54,9 +53,13 @@ export const Container = styled.div<IContainerProps>`
         font-size: .875rem;
       }
     }
+
+    > small{
+      left: 12px;
+    }
   }
 
-  @media(max-width: 420px){
+  @media(max-width: 450px){
     width: 100%;
 
     > h1 {

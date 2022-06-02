@@ -4,6 +4,10 @@ interface IContainerProps {
   menuIsOpen: boolean;
 }
 
+interface IFooterToggleProps {
+  menuIsOpen: boolean;
+}
+
 export const Container = styled.div<IContainerProps>`
   grid-area: AS;
   background-color: ${props => props.theme.color.secondary};
@@ -13,7 +17,7 @@ export const Container = styled.div<IContainerProps>`
   position: relative;
 
   @media(max-width: 600px){
-    padding-left: .5rem;
+    padding-left: 1.25rem;
     position: fixed;
     z-index: 2;
     width: 10rem;
@@ -40,8 +44,7 @@ export const LogImg = styled.img`
   width: 2.75rem;
 
   @media(max-width: 600px){
-    height: 1.5rem;
-    width: 1.75rem;
+    display: none;
   }
 `;
 
@@ -99,5 +102,38 @@ export const MenuItemButton = styled.button`
   > svg{
     font-size: 1.125rem;
     margin-right: .375rem;
+  }
+`;
+
+export const ToggleMenu = styled.button`
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  background-color: ${props => props.theme.color.warning};
+  color: ${props => props.theme.color.white};
+
+  transition: opacity .3s;
+
+  &:hover{
+    opacity: .7;
+  }
+
+  display: none;
+
+  @media(max-width: 600px){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
+export const FooterToggle = styled.footer<IFooterToggleProps>`
+  display: none;
+  position: absolute;
+  bottom: 2rem;
+
+  @media(max-width: 470px) {
+    display: ${props => props.menuIsOpen ? 'flex' : 'none'}
   }
 `;

@@ -24,14 +24,13 @@ export const Container = styled.div`
 `;
 
 export const LeftSide = styled.aside`
-  padding: 1rem 0 1rem 1.25rem;
 
   > h2{
     margin-bottom: 1.25rem;
   }
 
   @media(max-width: 1345px){
-    padding: 0 1rem .5rem;
+    padding-bottom: .5rem;
     margin-bottom: .5rem;
 
     > h2{
@@ -64,6 +63,10 @@ export const LegendContainer = styled.ul`
 
   ::-webkit-scrollbar-track{
     background-color: ${props => props.theme.color.tertiary};
+  }
+
+  @media(max-width: 1000px){
+    padding-right: 0;
   }
 
   @media(max-width: 1345px){

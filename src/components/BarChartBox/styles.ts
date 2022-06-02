@@ -17,7 +17,7 @@ export const Container = styled.div`
 
   display: flex;
 
-  @media(max-width: 1200px){
+  @media(max-width: 1000px){
     display: flex;
     flex-direction: column;
 
@@ -56,7 +56,7 @@ export const LegendContainer = styled.ul`
     background-color: ${props => props.theme.color.tertiary};
   }
 
-  @media(max-width: 1200px){
+  @media(max-width: 1000px){
     display: flex;
     height: auto;
   }
@@ -85,7 +85,7 @@ export const Legend = styled.li<ILegendProps>`
     margin-left: .5rem;
   }
 
-  @media(max-width: 1200px){
+  @media(max-width: 1000px){
     > div{
       font-size: 1rem;
       line-height: 2.5rem;
