@@ -1,10 +1,6 @@
-<div align="center">
-    <h1>Minha Carteira</h1>
-    <figure>
-      <img alt="Minha Carteira Dashboard" title="Minha Carteira" src="./src/assets/banner.png" />
-      <figcaption>Status atual do projeto</figcaption>
-    </figure>
-</div>
+<h1 align="center">Minha Carteira</h1>
+
+![Minha Carteira](https://user-images.githubusercontent.com/32960040/172261238-4c05ee9c-477b-40e5-a7f2-2396b52e2591.gif)
 
 <h3 align="center">
 	🏁 Curso concluído 🏁
