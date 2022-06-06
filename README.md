@@ -8,24 +8,24 @@
 
 ## Sobre o projeto
 
-Minha Carteira é um dashboard desenvolvido durante o curso xyz, da Udemy (links).
+Minha Carteira é um dashboard desenvolvido durante o curso [React e Typescript: Desenvolvendo um dashboard](https://www.udemy.com/course/react-e-typescript/), na Udemy.
 
 ---
 
 ## Funcionalidades
 
-- [] Responsividade com grid e flexbox
-- [] Gráficos
-- [] Temas de cores
-- [] Animações
-- [] Filtros
-- [] Navegação
+- Responsividade com grid e flexbox
+- Gráficos
+- Temas light e dark
+- Animações
+- Filtros
+- Navegação
 
 ---
 
 ## Layout
 
-As telas da aplicação estão disponíveis no [Figma](https://www.figma.com/file/nOGmUkhcINJt6nd57R4ENu/Minha-Carteira)
+Os diferentes designs da aplicação estão disponíveis no Figma, [neste link](https://www.figma.com/file/nOGmUkhcINJt6nd57R4ENu/Minha-Carteira)
 
 ---
 
@@ -52,16 +52,23 @@ $ cd minha-carteira
 # Instale as dependências
 $ npm install
 
-# Execute a aplicação
+# Execute a aplicação, OU
 $ npm start
 
-#ou abra no VSCode
+# abra no VSCode
 $ code .
 
 # A aplicação será aberta na porta:3000 - acesse http://localhost:3000
 
 ```
 ---
+
+### Autenticação
+
+Os dados de teste para o "login" são:
+
+- Usuário: test@test.com
+- Senha: test
 
 ## Tecnologias
 
