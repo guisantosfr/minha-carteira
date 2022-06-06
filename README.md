@@ -7,7 +7,7 @@
 </div>
 
 <h3 align="center">
-	🚧 Projeto em desenvolvimento 🚧
+	🏁 Curso concluído 🏁
 </h3>
 
 ## Sobre o projeto
